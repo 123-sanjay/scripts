@@ -1,5 +1,10 @@
 #!/bin/bash
 #!/bin/sh
+
+#################################################################
+
+
+
 printf "\033[1;31mnew system software installation and configuration\033[0m\n";
 a=$(echo -e " 1) Openssh-Server \n 2) Apache-Server \n 3) Mysql-server \n 4) php \n 5) PhpMyAdmin \n 6) Skype \n 7) Sublime \n 8) Google-Chrome \n 9) Filezilla")
 echo "$a"
