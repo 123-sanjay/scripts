@@ -2,7 +2,7 @@
 #!/bin/sh
 
 #################################################################
-
+#######Author - sanjay sanjaysankhla71@gmail.com #########
 
 
 printf "\033[1;31mnew system software installation and configuration\033[0m\n";
