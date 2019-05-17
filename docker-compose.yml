@@ -1,0 +1,12 @@
+version: '2'
+services:
+  webserver:
+    build: 
+      context: ./webserver/
+    container_name: nginx
+    volumes:
+      - ./magento2:/var/www/html
+      - ./webserver/supervisord.conf:/etc/supervisor/conf.d/supervisord.conf
+    ports:
+      - "80:80"
+      - "443:443"

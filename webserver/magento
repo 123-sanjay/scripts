@@ -1,0 +1,24 @@
+upstream fastcgi_backend {
+server unix:/run/php/php7.2-fpm.sock;
+}
+
+server {
+listen 80;
+listen [::]:80;
+server_name 192.168.100.163;
+#return 301 http://$server_name$request_uri;
+}
+
+server {
+
+listen 443;
+server_name 192.168.100.163;
+
+#ssl on;
+#ssl_certificate /etc/letsencrypt/live/jaadudekho.online/fullchain.pem;
+#ssl_certificate_key /etc/letsencrypt/live/jaadudekho.online/privkey.pem;
+
+set $MAGE_ROOT /var/www/html/;
+set $MAGE_MODE developer;
+include /var/www/html/nginx.conf.sample;
+}
