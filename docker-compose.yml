@@ -10,3 +10,10 @@ services:
     ports:
       - "80:80"
       - "443:443"
+
+  dbserver:
+    build:
+      context: ./dbserver/
+    container_name: mysql
+    ports:
+      - "3306:3306"
